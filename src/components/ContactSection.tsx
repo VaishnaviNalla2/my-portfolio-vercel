@@ -21,7 +21,7 @@ export default function ContactSection() {
     emailjs
       .sendForm(
         "service_osnghot", // ✅ Service ID
-        "service_osnghot", // ✅ Replace with your actual Template ID
+        "template_fupqx8d", // ✅ Replace with your actual Template ID
         e.target as HTMLFormElement, // ✅ This is the correct form reference
         "TOymL2ckZOQme5a99" // ✅ Your public key
       )
@@ -96,7 +96,7 @@ export default function ContactSection() {
               <label className="block text-sm font-medium mb-1">Your name</label>
               <input
                 type="text"
-                name="from_name"
+                name="name"
                 className="w-full border-b-2 border-[#9B1978] py-2 outline-none"
                 placeholder="Enter your name"
                 required
@@ -106,7 +106,7 @@ export default function ContactSection() {
               <label className="block text-sm font-medium mb-1">Your email</label>
               <input
                 type="email"
-                name="from_email"
+                name="email"
                 className="w-full border-b-2 border-gray-300 py-2 outline-none"
                 placeholder="Enter your email"
                 required

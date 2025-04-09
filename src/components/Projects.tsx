@@ -1,6 +1,7 @@
 "use client"
 
-import { useRef } from "react"
+import { useRef, useState } from "react";
+
 import { motion, useScroll, useTransform } from "framer-motion"
 
 const projects = [
@@ -31,6 +32,10 @@ const projects = [
       "Built scalable backend modules, including API endpoints and database optimizations, to support frontend features and improve integration with Firebase services.",
       "Conducted internal A/B testing for web components to evaluate user engagement and design preferences",
       "Tested components on both mobile and web for functionality and reliability. Validated API responses using Postman, automated tests. Identified and resolved UI and API integration issues."
+    ],
+    screenshots: [ 
+      "/images/ethos-1.png",
+      "/images/ethos-2.png"
     ]
   },
   {
@@ -53,8 +58,10 @@ const projects = [
       "Utilized PostgreSQL for efficient data storage and retrieval.",
       "Implemented CI/CD pipelines for automated testing and deployment.",
       "Conducted unit testing (Jest, Mocha) and API testing to ensure reliability and accuracy."
+    
     ]
   },
+  
   {
     title: "Multifunctional Text & Speech Converter",
     date: "Dec 2022",
@@ -70,20 +77,24 @@ const projects = [
 ]
 
 export default function ProjectsScrollReveal() {
+  
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({ target: ref })
   const y = useTransform(scrollYProgress, [0, 1], [0, -300])
+  const [openModal, setOpenModal] = useState<number | null>(null);
+
 
   return (
-    <section ref={ref} className="flex flex-col md:flex-row py-32 px-6 gap-16 bg-white">
+    <section id="projects" ref={ref} className="flex flex-col md:flex-row py-32 px-6 gap-16 bg-white">
       {/* Left Side: Fixed Heading */}
-      <div className="md:w-1/2 md:sticky md:top-32 self-start flex flex-col items-center text-center relative z-0">
-        <h2 className="text-4xl font-bold text-[#1E1B2E]">My Projects</h2>
-        <div className="w-16 h-1 bg-[#006A71] mt-2 mb-4 rounded-full"></div>
-        <p className="text-gray-700 max-w-md leading-relaxed">
-          Explore my recent work — projects built using modern stacks and collaborative development approaches.
-        </p>
-      </div>
+      <div className="md:w-1/2 md:sticky md:top-1/2 transform md:-translate-y-1/2 self-start flex flex-col items-center text-center relative z-0 px-4">
+  <h2 className="text-5xl md:text-6xl font-bold text-[#1E1B2E] mb-4">My Projects</h2>
+  <div className="w-20 h-1 bg-[#006A71] mb-6 rounded-full"></div>
+  <p className="text-gray-700 text-lg md:text-xl max-w-md leading-relaxed">
+    Explore my recent work — projects built using modern stacks and collaborative development approaches.
+  </p>
+</div>
+
 
       {/* Right Side: Scrollable Blocks */}
       <div className="md:w-1/2 space-y-24 z-10">
@@ -125,9 +136,43 @@ export default function ProjectsScrollReveal() {
                 View Work ↗
               </a>
             )}
+            {project.title === "Ethos: Small Business Platform" && (
+             <button
+               onClick={() => setOpenModal(idx)}
+                   className="mt-4 px-4 py-2 bg-[#F47174] text-white text-sm rounded-full font-medium hover:bg-[#e05a5f] transition"
+                       >
+                         View Work ↗
+                          </button>
+                        )}
+
           </motion.div>
         ))}
       </div>
+
+      {openModal !== null && (
+  <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50">
+    <div className="bg-white rounded-xl p-6 max-w-3xl w-full relative">
+      <button
+        className="absolute top-3 right-3 text-black text-xl"
+        onClick={() => setOpenModal(null)}
+      >
+        ✖
+      </button>
+      <h3 className="text-xl font-semibold mb-4 text-center">Ethos Project Screenshots</h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {projects[openModal]?.screenshots?.map((src, i) => (
+          <img
+            key={i}
+            src={src}
+            alt={`Ethos Screenshot ${i + 1}`}
+            className="rounded-lg border"
+          />
+        ))}
+      </div>
+    </div>
+  </div>
+)}
+
     </section>
   )
 }

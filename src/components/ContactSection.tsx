@@ -13,22 +13,17 @@ export default function ContactSection() {
     setIsClient(true); // Make sure this is only triggered once, after the component mounts
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setStatus("Sending...");
-
-    // Collect form data
-    const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
-
-    // Send email via EmailJS
+  
     emailjs
       .sendForm(
-        "service_osnghot", // Your EmailJS Service ID
-        "service_osnghot", // Your EmailJS Template ID
-        formData,
-        "TOymL2ckZOQme5a99"  // Your EmailJS Public Key
+        "service_osnghot", // ✅ Service ID
+        "service_osnghot", // ✅ Replace with your actual Template ID
+        e.target as HTMLFormElement, // ✅ This is the correct form reference
+        "TOymL2ckZOQme5a99" // ✅ Your public key
       )
       .then(
         (result) => {
@@ -36,12 +31,13 @@ export default function ContactSection() {
           setStatus("Message sent successfully!");
         },
         (error) => {
-          console.error("EmailJS error:", error);  // Log any error
+          console.error("EmailJS error:", error);
           setIsSubmitting(false);
           setStatus("Failed to send message, try again later.");
         }
       );
   };
+  
 
   if (!isClient) return null; // Prevent form rendering until it's mounted on the client side
 

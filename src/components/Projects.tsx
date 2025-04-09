@@ -1,7 +1,6 @@
 "use client"
 
-import { useRef, useState } from "react";
-
+import { useRef, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 
 const projects = [
@@ -9,94 +8,70 @@ const projects = [
     title: "AI-Driven Profile Optimizer Metrics Dashboard",
     date: "Jan 2024 – Present",
     tech: ["React", "JavaScript", "REST APIs", "Vercel", "Agile"],
-    highlights: [
-      "Developed a frontend metrics dashboard with 9 web pages in React to visualize AI analysis of users dating profile (images, bios, prompts).",
-      "Integrated with backend AI models via RESTful APIs to display real-time, structured scores and improvement suggestions.",
-      "Designed modular components to present photo quality, bio strength, and prompt impact using color-coded logic and progress bars.",
-      "Collaborated with backend developers, UI/UX designers, and PMs to translate model outputs into interactive insights; Used Git for version control.",
-      "Applied Figma designs to build pixel-perfect components across multi-device responsive layouts.",
-      "Wrote unit tests using Jest to validate dashboard components, reduced UI errors by 25%",
-      "Participated in daily Agile stand-ups; tracked development tasks and bugs using JIRA.",
-      "Deployed and tested the application on Vercel for internal reviews and feedback (bestyou-three.vercel.app).",
-      "Currently extending the dashboard using Plotly to enhance metric visualization and support better AI evaluation workflows."
-    ],
-    link: "https://bestyou-three.vercel.app"
+    description: `Developed a 9-page React dashboard to visualize AI analysis of user dating profiles (images, bios, prompts).
+Integrated RESTful APIs to display real-time structured scores and improvement suggestions.
+Built responsive, modular components based on Figma designs.
+Wrote Jest unit tests reducing UI errors by 25%.
+Collaborated with backend, UI/UX, and PM teams using Agile and Git.
+Deployed to Vercel and currently enhancing visualizations using Plotly.`,
+    link: "https://bestyou-three.vercel.app",
+    video: "/videos/AIPMBootcampDemo.mov"
   },
   {
     title: "Ethos: Small Business Platform",
     date: "Nov – Dec 2024",
-    tech: ["React", "REST APIs", "Testing"],
-    highlights: [
-      "Developed web pages using React & React Native, following Figma designs provided by the designers. Integrated Google Places API and Firebase to fetch and display structured business data.",
-      "Collaborated with the team on Monday.com and connected on daily standups with product managers and backend engineers, participating in Agile workflows. Used Git for code commits.",
-      "Built scalable backend modules, including API endpoints and database optimizations, to support frontend features and improve integration with Firebase services.",
-      "Conducted internal A/B testing for web components to evaluate user engagement and design preferences",
-      "Tested components on both mobile and web for functionality and reliability. Validated API responses using Postman, automated tests. Identified and resolved UI and API integration issues."
-    ],
-    screenshots: [ 
-      "/images/ethos-1.png",
-      "/images/ethos-2.png"
-    ]
+    tech: ["React", "React Native", "Firebase", "REST APIs"],
+    description: `Built frontend using React and Figma designs; integrated Firebase and Google Places API.
+Collaborated via Agile with backend, designers, and PMs using Monday.com.
+Created scalable backend modules and optimized database access.
+Tested across devices, resolved API/UI bugs, and ran internal A/B testing.`,
+    screenshots: ["/images/ethos-1.png", "/images/ethos-2.png"]
   },
   {
     title: "Real-Time Weather Application",
     date: "Nov 2024",
     tech: ["HTML5", "CSS3", "JavaScript", "OpenWeather API"],
-    highlights: [
-      "Developed a dynamic weather app integrating RESTful APIs to fetch and display real-time meteorological data for global locations.",
-      "Implemented a clean UI with geolocation support and responsive design, serving many active users during testing."
-    ]
+    description: `Developed a responsive weather web app using OpenWeather API.
+Implemented geolocation support and real-time weather display with clean UI.`
   },
   {
     title: "E-Commerce Trust Analytics web app",
     date: "Mar 2023",
     tech: ["Python", "Java", "Node.js", "React", "AWS"],
-    highlights: [
-      "Developed a full-stack e-commerce platform using React, Node.js, and Java to enhance trust analytics.",
-      "Integrated NLP-based sentiment analysis to analyze customer reviews & derive trust metrics, improving engagement.",
-      "Built and deployed scalable RESTful APIs on AWS to ensure low-latency responses.",
-      "Utilized PostgreSQL for efficient data storage and retrieval.",
-      "Implemented CI/CD pipelines for automated testing and deployment.",
-      "Conducted unit testing (Jest, Mocha) and API testing to ensure reliability and accuracy."
-    
-    ]
+    description: `Created a full-stack platform with sentiment analysis of customer reviews.
+Built REST APIs deployed on AWS; used PostgreSQL for efficient storage.
+Implemented CI/CD pipelines and tested thoroughly with Jest & Mocha.`,
+    screenshots: ["/images/ethos-1.png", "/images/ethos-2.png"]
   },
-  
   {
     title: "Multifunctional Text & Speech Converter",
     date: "Dec 2022",
     tech: ["Python", "NLP", "PyTorch"],
-    highlights: [
-      "Developed a Windows application for text-to-speech and speech-to-text conversion using Python, NLP, and PyTorch.",
-      "Achieved 95% accuracy in speech synthesis by leveraging NLTK and deep learning models.",
-      "Designed an intuitive UI to enhance user experience, receiving a 4.6/5 usability rating in testing.",
-      "Implemented real-time audio processing for seamless speech recognition.",
-      "Conducted unit testing and debugging to ensure system reliability"
-    ]
+    description: `Developed a Windows app for speech-to-text and text-to-speech using PyTorch and NLTK.
+Implemented real-time audio processing with 95% accuracy and a 4.6/5 usability score.`
   }
 ]
 
 export default function ProjectsScrollReveal() {
-  
   const ref = useRef(null)
   const { scrollYProgress } = useScroll({ target: ref })
   const y = useTransform(scrollYProgress, [0, 1], [0, -300])
-  const [openModal, setOpenModal] = useState<number | null>(null);
 
+  const [openModal, setOpenModal] = useState<number | null>(null)
+  const [openVideoModal, setOpenVideoModal] = useState<number | null>(null)
 
   return (
     <section id="projects" ref={ref} className="flex flex-col md:flex-row py-32 px-6 gap-16 bg-white">
       {/* Left Side: Fixed Heading */}
       <div className="md:w-1/2 md:sticky md:top-1/2 transform md:-translate-y-1/2 self-start flex flex-col items-center text-center relative z-0 px-4">
-  <h2 className="text-5xl md:text-6xl font-bold text-[#1E1B2E] mb-4">My Projects</h2>
-  <div className="w-20 h-1 bg-[#006A71] mb-6 rounded-full"></div>
-  <p className="text-gray-700 text-lg md:text-xl max-w-md leading-relaxed">
-    Explore my recent work — projects built using modern stacks and collaborative development approaches.
-  </p>
-</div>
+        <h2 className="text-5xl md:text-6xl font-bold text-[#1E1B2E] mb-4">My Projects</h2>
+        <div className="w-20 h-1 bg-[#006A71] mb-6 rounded-full"></div>
+        <p className="text-gray-700 text-lg md:text-xl max-w-md leading-relaxed">
+          Explore my recent work — projects built using modern stacks and collaborative development approaches.
+        </p>
+      </div>
 
-
-      {/* Right Side: Scrollable Blocks */}
+      {/* Right Side: Project Blocks */}
       <div className="md:w-1/2 space-y-24 z-10">
         {projects.map((project, idx) => (
           <motion.div
@@ -107,8 +82,8 @@ export default function ProjectsScrollReveal() {
             viewport={{ once: true, amount: 0.3 }}
             className="bg-[#2B174C] p-6 rounded-xl shadow-md text-white"
           >
-            <div className="flex justify-between items-start mb-2">
-              <h3 className="text-xl font-semibold">{project.title}</h3>
+            <div className="flex justify-between items-start mb-2 flex-wrap">
+              <h3 className="text-xl font-semibold max-w-[70%]">{project.title}</h3>
               <span className="text-sm text-[#F47174]">{project.date}</span>
             </div>
             <div className="flex flex-wrap gap-2 mb-3">
@@ -121,58 +96,86 @@ export default function ProjectsScrollReveal() {
                 </span>
               ))}
             </div>
-            <ul className="list-disc list-inside text-sm text-white/90 space-y-1">
-              {project.highlights.map((point, i) => (
-                <li key={i}>{point}</li>
-              ))}
-            </ul>
-            {project.link && idx === 0 && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block mt-4 px-4 py-2 bg-[#F47174] text-white text-sm rounded-full font-medium hover:bg-[#e05a5f] transition"
+            <p className="text-sm text-white/90 whitespace-pre-line leading-relaxed mb-3">
+              {project.description}
+            </p>
+
+            {idx === 0 && (
+              <div className="flex gap-4 mt-4">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-4 py-2 bg-[#F47174] text-white text-sm rounded-full font-medium hover:bg-[#e05a5f] transition"
+                >
+                  View Work ↗
+                </a>
+                <button
+                  onClick={() => setOpenVideoModal(idx)}
+                  className="px-4 py-2 bg-[#F47174] text-white text-sm rounded-full font-medium hover:bg-[#e05a5f] transition"
+                >
+                  View Demo Video 🎥
+                </button>
+              </div>
+            )}
+
+            {project.screenshots && idx !== 0 && (
+              <button
+                onClick={() => setOpenModal(idx)}
+                className="mt-4 px-4 py-2 bg-[#F47174] text-white text-sm rounded-full font-medium hover:bg-[#e05a5f] transition"
               >
                 View Work ↗
-              </a>
+              </button>
             )}
-            {project.title === "Ethos: Small Business Platform" && (
-             <button
-               onClick={() => setOpenModal(idx)}
-                   className="mt-4 px-4 py-2 bg-[#F47174] text-white text-sm rounded-full font-medium hover:bg-[#e05a5f] transition"
-                       >
-                         View Work ↗
-                          </button>
-                        )}
-
           </motion.div>
         ))}
       </div>
 
+      {/* Screenshot Modal */}
       {openModal !== null && (
-  <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50">
-    <div className="bg-white rounded-xl p-6 max-w-3xl w-full relative">
-      <button
-        className="absolute top-3 right-3 text-black text-xl"
-        onClick={() => setOpenModal(null)}
-      >
-        ✖
-      </button>
-      <h3 className="text-xl font-semibold mb-4 text-center">Ethos Project Screenshots</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {projects[openModal]?.screenshots?.map((src, i) => (
-          <img
-            key={i}
-            src={src}
-            alt={`Ethos Screenshot ${i + 1}`}
-            className="rounded-lg border"
-          />
-        ))}
-      </div>
-    </div>
-  </div>
-)}
+        <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-6 max-w-2xl w-full relative">
+            <button
+              className="absolute top-3 right-3 text-black text-2xl font-bold hover:text-red-600 transition"
+              onClick={() => setOpenModal(null)}
+            >
+              ✖
+            </button>
+            <h3 className="text-xl font-semibold mb-4 text-center">Project Screenshots</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {projects[openModal]?.screenshots?.map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt={`Screenshot ${i + 1}`}
+                  className="rounded-lg border"
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
+      {/* Video Modal */}
+      {openVideoModal !== null && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-6 max-w-2xl w-full relative">
+            <button
+              className="absolute top-3 right-3 text-black text-2xl font-bold hover:text-red-600 transition"
+              onClick={() => setOpenVideoModal(null)}
+            >
+              ×
+            </button>
+            <h3 className="text-xl font-semibold mb-4 text-center">Demo Video</h3>
+            <video
+              controls
+              autoPlay
+              className="w-full rounded-lg"
+              src={projects[openVideoModal].video}
+            />
+          </div>
+        </div>
+      )}
     </section>
   )
 }

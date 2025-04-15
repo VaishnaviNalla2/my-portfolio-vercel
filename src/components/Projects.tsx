@@ -6,16 +6,18 @@ import { motion, useScroll, useTransform } from "framer-motion"
 const projects = [
   {
     title: "AI-Driven Profile Optimizer Metrics Dashboard",
-    date: "Jan 2024 – Present",
+    date: "Jan 2025 – Till Date",
     tech: ["React", "JavaScript", "REST APIs", "Vercel", "Agile"],
-    description: `Developed a 9-page React dashboard to visualize AI analysis of user dating profiles (images, bios, prompts).
-Integrated RESTful APIs to display real-time structured scores and improvement suggestions.
-Built responsive, modular components based on Figma designs.
-Wrote Jest unit tests reducing UI errors by 25%.
-Collaborated with backend, UI/UX, and PM teams using Agile and Git.
-Deployed to Vercel and currently enhancing visualizations using Plotly.`,
+    description: `Designed and developed responsive, multi-page web interfaces using React, based on Figma designs from the UI/UX team.
+      Integrated real-time outputs from backend AI models via RESTful APIs to deliver structured insights and improvement suggestions.
+      Implemented dynamic UI components such as progress bars, color-coded feedback indicators, and modal popups for interactive metric visualization.
+      Collaborated in an Agile workflow, participating in daily stand-ups with cross-functional team members including backend developers, designers, and product managers.
+      Managed project workflows, issue tracking, and sprint progress using JIRA and Git.
+      Deployed the application on Vercel for internal testing, demo delivery, and feedback (bestyou-three.vercel.app).
+      Continuously contributed to frontend performance improvements and actively resolved bugs leading up to the MVP launch.`,
     link: "https://bestyou-three.vercel.app",
-    video: "/videos/AIPMBootcampDemo.mov"
+    video: "/videos/AIPMBootcampDemo.mp4"
+
   },
   {
     title: "Ethos: Small Business Platform",
@@ -34,6 +36,18 @@ Tested across devices, resolved API/UI bugs, and ran internal A/B testing.`,
     description: `Developed a responsive weather web app using OpenWeather API.
 Implemented geolocation support and real-time weather display with clean UI.`
   },
+
+  {
+    title: "Fault-Tolerant Distributed System",
+    date: "Feb 2024",
+    tech: ["Java", "AWS", "Distributed Architecture"],
+    description: `Developed a fault-tolerant architecture for distributed component tree computations, improving system resilience and uptime by 25% through automated failover and recovery protocols.
+    Implemented dynamic component monitoring and self-healing mechanisms to maintain high availability in distributed cloud environments.
+    Designed scalable workflows to manage component failures and orchestrate recovery without disrupting overall system performance.
+    Tested and hosted the solution on AWS to simulate failure scenarios and validate fault tolerance under real-world conditions.`,
+    link: "https://github.com/VaishnaviNalla2/Enhancing-Fault-Tolerance-in-Distributed-Systems-for-Component-Tree-Computations"
+  },
+  
   {
     title: "E-Commerce Trust Analytics web app",
     date: "Mar 2023",
@@ -41,15 +55,20 @@ Implemented geolocation support and real-time weather display with clean UI.`
     description: `Created a full-stack platform with sentiment analysis of customer reviews.
 Built REST APIs deployed on AWS; used PostgreSQL for efficient storage.
 Implemented CI/CD pipelines and tested thoroughly with Jest & Mocha.`,
-    screenshots: ["/images/ethos-1.png", "/images/ethos-2.png"]
+    link: "https://github.com/VaishnaviNalla2/Mining-Users-Trust-From-E-Commerce-Reviews-Based-on-Sentiment-Similarity-Analysis"
   },
   {
     title: "Multifunctional Text & Speech Converter",
     date: "Dec 2022",
     tech: ["Python", "NLP", "PyTorch"],
-    description: `Developed a Windows app for speech-to-text and text-to-speech using PyTorch and NLTK.
-Implemented real-time audio processing with 95% accuracy and a 4.6/5 usability score.`
+    description: `Developed a Windows application for text-to-speech and speech-to-text conversion using Python, NLP, and PyTorch.
+    Achieved 95% accuracy in speech synthesis by leveraging NLTK and deep learning models.
+    Designed an intuitive UI to enhance user experience, receiving a 4.6/5 usability rating in testing.
+    Implemented real-time audio processing for seamless speech recognition.
+    Conducted unit testing and debugging to ensure system reliability.`,
+    pdf: "/pdfs/mini-project.pdf"
   }
+  
 ]
 
 export default function ProjectsScrollReveal() {
@@ -59,6 +78,8 @@ export default function ProjectsScrollReveal() {
 
   const [openModal, setOpenModal] = useState<number | null>(null)
   const [openVideoModal, setOpenVideoModal] = useState<number | null>(null)
+  const [openPDFModal, setOpenPDFModal] = useState<number | null>(null);
+
 
   return (
     <section id="projects" ref={ref} className="flex flex-col md:flex-row py-32 px-6 gap-16 bg-white">
@@ -118,6 +139,14 @@ export default function ProjectsScrollReveal() {
                 </button>
               </div>
             )}
+                {project.title === "Multifunctional Text & Speech Converter" && (
+  <button
+    onClick={() => setOpenPDFModal(idx)}
+    className="px-4 py-2 bg-[#F47174] text-white text-sm rounded-full font-medium hover:bg-[#e05a5f] transition"
+  >
+    View Work ↗
+  </button>
+)}
 
             {project.screenshots && idx !== 0 && (
               <button
@@ -127,6 +156,17 @@ export default function ProjectsScrollReveal() {
                 View Work ↗
               </button>
             )}
+            {/* For projects with only link (GitHub or demo) */}
+            {idx !== 0 && project.link && (
+          <a
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-4 py-2 bg-[#F47174] text-white text-sm rounded-full font-medium hover:bg-[#e05a5f] transition"
+    >
+      View Work ↗
+    </a>
+  )}
           </motion.div>
         ))}
       </div>
@@ -155,6 +195,26 @@ export default function ProjectsScrollReveal() {
           </div>
         </div>
       )}
+
+{openPDFModal !== null && (
+  <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50">
+    <div className="bg-white rounded-xl p-6 max-w-4xl w-full relative">
+      <button
+        className="absolute top-3 right-3 text-black text-2xl font-bold hover:text-red-600 transition"
+        onClick={() => setOpenPDFModal(null)}
+      >
+        ×
+      </button>
+      <h3 className="text-xl font-semibold mb-4 text-center">Project Document</h3>
+      <iframe
+        src={projects[openPDFModal].pdf}
+        className="w-full h-[80vh] rounded-lg"
+        frameBorder="0"
+      />
+    </div>
+  </div>
+)}
+
 
       {/* Video Modal */}
       {openVideoModal !== null && (

@@ -6,13 +6,15 @@ import { useInView } from "framer-motion"
 
 const experiences = [
   {
-    title: "Frontend Engineer Intern",
+    title: "Software Engineer Intern",
     org: "PM Accelerator – Florida, USA",
     date: "Nov 2024 – Apr 2025",
     points: [
-      "Built React dashboards with real-time data from REST APIs.",
-      "Collaborated cross-functionally to improve model evaluation workflows.",
-      "Used JIRA, Git, and Agile practices."
+      "Developed web pages using React and JavaScript based on Figma designs provided by the UI/UX team.",
+      "Integrated RESTful APIs and connected frontend to backend databases for seamless data flow.",
+      "Collaborated with cross-functional teams through Agile methodologies using JIRA and daily standups.",
+      "Maintained code quality with Git version control and peer reviews.",
+      "Conducted unit testing and ensured cross-browser UI consistency and functionality."
     ]
   },
   {

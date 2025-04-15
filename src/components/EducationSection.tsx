@@ -38,23 +38,22 @@ export default function EducationSection() {
           Education
         </motion.h2>
 
-        <div
-          ref={ref}
-          className="mt-16 w-full max-w-2xl mx-auto"
-        >
+        <div ref={ref} className="mt-16 w-full max-w-2xl mx-auto">
           <motion.div
-            className="bg-[#27374D] rounded-2xl px-6 py-10 shadow-xl text-white relative overflow-hidden"
+            className="bg-[#27374D] rounded-2xl px-8 py-10 shadow-xl text-white relative overflow-hidden"
             initial={{ scale: 0.6, opacity: 0 }}
             animate={isInView ? { scale: 1, opacity: 1 } : {}}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="space-y-12">
+            <div className="space-y-10">
               {education.map((edu, i) => (
-                <div key={i} className="text-left">
-                  <div className="mb-1 text-sm text-[#9DB2BF] font-medium">{edu.date}</div>
-                  <h3 className="text-lg font-semibold text-[#9DB2BF]">{edu.school}</h3>
-                  <p className="text-sm text-[#526D82] italic mb-1">{edu.degree}</p>
-                  {edu.gpa && <p className="text-sm text-white/80 mb-2">{edu.gpa}</p>}
+                <div key={i} className="text-left border-b border-white/20 pb-6 last:border-none">
+                  <div className="flex justify-between items-center mb-2">
+                    <h3 className="text-lg md:text-xl font-semibold text-white">{edu.school}</h3>
+                    <span className="text-sm text-[#9DB2BF]">{edu.date}</span>
+                  </div>
+                  <p className="text-sm text-[#9DB2BF] italic mb-1">{edu.degree}</p>
+                  {edu.gpa && <p className="text-sm text-white/80 mb-3">{edu.gpa}</p>}
                   {edu.details.length > 0 && (
                     <ul className="list-disc text-sm text-white/90 pl-5 space-y-1">
                       {edu.details.map((point, idx) => (
@@ -71,3 +70,4 @@ export default function EducationSection() {
     </section>
   )
 }
+

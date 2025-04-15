@@ -4,29 +4,38 @@ import { motion } from 'framer-motion'
 
 const skills = [
   {
-    title: 'Frontend',
-    items: ['React.js', 'TypeScript', 'Tailwind CSS', 'JavaScript', 'HTML5', 'CSS3'],
-  },
-  {
-    title: 'Backend & APIs',
-    items: ['Node.js', 'Express.js', 'Java', 'Python', 'REST APIs'],
+    title: 'Languages',
+    items: ['Python', 'JavaScript (ES6+)', 'TypeScript', 'C#', 'Java', 'HTML5', 'CSS3', 'SQL'],
   },
   {
     title: 'Databases',
-    items: ['PostgreSQL', 'MySQL', 'NoSQL', 'SQL'],
+    items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', '(learning RabbitMQ)'],
   },
   {
-    title: 'Frameworks',
-    items: ['Django', 'FastAPI', 'React Native', 'Angular', 'Vue'],
+    title: 'Frontend',
+    items: ['React', 'Next.js', 'React Native', 'Bootstrap', 'Tailwind CSS', 'Responsive UI Design', 'Angular'],
   },
   {
-    title: 'Tools & Cloud',
-    items: ['Docker', 'Kafka', 'Git', 'Jira', 'Vercel', 'Apache Spark'],
+    title: 'Backend & APIs',
+    items: ['Django', 'FastAPI', 'Node.js', 'Express.js', 'REST API Development'],
   },
   {
-    title: 'Testing & Dev',
-    items: ['CI/CD', 'Agile', 'Jest', 'Mocha', 'Selenium', 'Debugging'],
+    title: 'Developer Tools',
+    items: ['JIRA', 'GitHub', 'VS Code', 'Vercel', 'Postman', 'Agile/Scrum', 'Figma to code'],
   },
+  {
+    title: 'Web & Automation',
+    items: ['Web Scraping (BeautifulSoup, Selenium)', 'Automation Scripts', 'NLP', 'JSON'],
+  },
+  {
+    title: 'Deployment & DevOps',
+    items: ['Agile Methodologies', 'CI/CD', 'Data structures & algorithms', 'AWS', 'GCP', 'Docker', 'Git'],
+  },
+  {
+    title: 'Testing',
+    items: ['Code Review', 'Debugging', 'Unit Testing (Jest, Mocha)', 'Cross-Browser Compatibility', 'Troubleshooting'],
+  },
+
 ]
 
 export default function Skills() {

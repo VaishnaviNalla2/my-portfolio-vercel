@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 const projects = [
   {
     title: "AI-Driven Profile Optimizer Metrics Dashboard",
-    date: "Jan 2025 – Till Date",
+    date: "Jan 2025 – April 2025",
     tech: ["React", "JavaScript", "REST APIs", "Vercel", "Agile"],
     description: `Designed and developed responsive, multi-page web interfaces using React, based on Figma designs from the UI/UX team.
       Integrated real-time outputs from backend AI models via RESTful APIs to deliver structured insights and improvement suggestions.

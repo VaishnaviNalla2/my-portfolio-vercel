@@ -40,21 +40,26 @@ Implemented geolocation support and real-time weather display with clean UI.`
   {
     title: "Fault-Tolerant Distributed System",
     date: "Feb 2024",
-    tech: ["Java", "AWS", "Distributed Architecture"],
-    description: `Developed a fault-tolerant architecture for distributed component tree computations, improving system resilience and uptime by 25% through automated failover and recovery protocols.
-    Implemented dynamic component monitoring and self-healing mechanisms to maintain high availability in distributed cloud environments.
-    Designed scalable workflows to manage component failures and orchestrate recovery without disrupting overall system performance.
-    Tested and hosted the solution on AWS to simulate failure scenarios and validate fault tolerance under real-world conditions.`,
+    tech: ["Python", "Distributed Systems", "OS", "Algorithms"],
+    description: `Designed and implemented a distributed fault-tolerant system using checkpoint/restart and data replication to enhance reliability in component tree computations.
+Built Python modules to simulate system failures, store computation state periodically, and recover seamlessly using serialized checkpoints.
+Developed a data redundancy mechanism to replicate critical computation data across nodes, enabling high availability and minimal downtime.
+Validated system robustness through simulated node failures and recovery scenarios, reducing recovery time by 50% and increasing data recovery success rate from 85% to 99%.
+Documented findings in an IEEE-style paper and delivered technical presentations covering architecture, algorithms, and performance analysis.`,
     link: "https://github.com/VaishnaviNalla2/Enhancing-Fault-Tolerance-in-Distributed-Systems-for-Component-Tree-Computations"
   },
   
   {
     title: "E-Commerce Trust Analytics web app",
     date: "Mar 2023",
-    tech: ["Python", "Java", "Node.js", "React", "AWS"],
-    description: `Created a full-stack platform with sentiment analysis of customer reviews.
-Built REST APIs deployed on AWS; used PostgreSQL for efficient storage.
-Implemented CI/CD pipelines and tested thoroughly with Jest & Mocha.`,
+    tech: ["Java", "JSP", "JDBC", "MySQL", "HTML", "CSS", "JFreeChart"],
+    description: `Built a full-stack e-commerce web app using Java (Servlets, JSP), MySQL, HTML, CSS, deployed on Tomcat server.
+Developed user and seller modules for product search, recommendations, and sentiment-based trust analytics.
+Calculated direct and propagation trust scores between users based on review sentiment similarity.
+Integrated JFreeChart to visualize trust graphs and product recommendation analytics.
+Connected frontend to backend using JDBC for seamless data operations and dynamic content rendering.
+Designed and optimized MySQL database for managing users, products, reviews, and trust relationships.
+Performed unit, integration, and acceptance testing to ensure functionality, accuracy, and performance.`,
     link: "https://github.com/VaishnaviNalla2/Mining-Users-Trust-From-E-Commerce-Reviews-Based-on-Sentiment-Similarity-Analysis"
   },
   {

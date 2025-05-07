@@ -9,7 +9,7 @@ const education = [
     degree: "MS in Computer Science",
     school: "Wright State University",
     date: "Aug 2023 – April 2025",
-    gpa: "GPA: 3.625/4.0",
+    gpa: "GPA: 3.7/4.0",
     details: [
       "Coursework: Algorithm Design & Analysis, Distributed Computing, Quantum Algorithms, Quantum Computing, Information Retrieval, Reverse Engineering, Advanced Computer Network"
     ]

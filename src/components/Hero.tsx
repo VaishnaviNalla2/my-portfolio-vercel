@@ -14,11 +14,14 @@ export default function Hero() {
       </h1>
 
       <p className="mt-4 text-lg md:text-xl text-gray-700 max-w-2xl">
-        I’m a Software Engineer and Developer with expertise in Java, Python, JavaScript, and cloud-based distributed systems.
-        Currently pursuing my Master's at Wright State University (Expected April 2025), I have a proven track record in building scalable web applications.
-        <br className="hidden md:block" />
-        I’m actively looking for full-time and internship roles where I can contribute my skills. Feel free to connect with me! 🚀
-      </p>
+  I’m a Software Engineer and Developer with expertise in Java, Python, JavaScript, and cloud-based distributed systems.
+  I recently completed my Master's at Wright State University (May 2025) and have a proven track record in building scalable web applications.
+  <br className="hidden md:block" />
+  I'm also well-versed in Data Structures and Algorithms, and I apply that knowledge to write efficient, optimized code.
+  <br className="hidden md:block" />
+  I’m actively looking for full-time and internship roles where I can contribute my skills. Feel free to connect with me! 🚀
+</p>
+
 
       <div className="mt-6 flex gap-4 flex-wrap justify-center">
       <Link

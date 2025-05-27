@@ -13,7 +13,7 @@ const skills = [
   },
   {
     title: 'Frontend',
-    items: ['React', 'Next.js', 'React Native', 'Bootstrap', 'Tailwind CSS', 'Responsive UI Design', 'Angular'],
+    items: ['React', 'Next.js', 'React Native', 'Bootstrap', 'ASP.NET', 'ASP', 'Tailwind CSS', 'Responsive UI Design', 'Angular'],
   },
   {
     title: 'Backend & APIs',

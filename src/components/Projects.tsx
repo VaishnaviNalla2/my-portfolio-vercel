@@ -4,21 +4,7 @@ import { useRef, useState } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 
 const projects = [
-  {
-    title: "AI-Driven Profile Optimizer Metrics Dashboard",
-    date: "Jan 2025 – April 2025",
-    tech: ["React", "JavaScript", "REST APIs", "Vercel", "Agile"],
-    description: `Designed and developed responsive, multi-page web interfaces using React, based on Figma designs from the UI/UX team.
-      Integrated real-time outputs from backend AI models via RESTful APIs to deliver structured insights and improvement suggestions.
-      Implemented dynamic UI components such as progress bars, color-coded feedback indicators, and modal popups for interactive metric visualization.
-      Collaborated in an Agile workflow, participating in daily stand-ups with cross-functional team members including backend developers, designers, and product managers.
-      Managed project workflows, issue tracking, and sprint progress using JIRA and Git.
-      Deployed the application on Vercel for internal testing, demo delivery, and feedback (bestyou-three.vercel.app).
-      Continuously contributed to frontend performance improvements and actively resolved bugs leading up to the MVP launch.`,
-    link: "https://bestyou-three.vercel.app",
-    video: "/videos/AIPMBootcampDemo.mp4"
-
-  },
+ 
   {
     title: "Whisper AI – Privacy-First Emotional Support Chat Interface",
     date: "May 2025 – Present",
@@ -35,6 +21,22 @@ const projects = [
     video: "/videos/AIPMBootcampDemo.mp4"
 
   },
+ {
+    title: "AI-Driven Profile Optimizer Metrics Dashboard",
+    date: "Jan 2025 – April 2025",
+    tech: ["React", "JavaScript", "REST APIs", "Vercel", "Agile"],
+    description: `Designed and developed responsive, multi-page web interfaces using React, based on Figma designs from the UI/UX team.
+      Integrated real-time outputs from backend AI models via RESTful APIs to deliver structured insights and improvement suggestions.
+      Implemented dynamic UI components such as progress bars, color-coded feedback indicators, and modal popups for interactive metric visualization.
+      Collaborated in an Agile workflow, participating in daily stand-ups with cross-functional team members including backend developers, designers, and product managers.
+      Managed project workflows, issue tracking, and sprint progress using JIRA and Git.
+      Deployed the application on Vercel for internal testing, demo delivery, and feedback (bestyou-three.vercel.app).
+      Continuously contributed to frontend performance improvements and actively resolved bugs leading up to the MVP launch.`,
+    link: "https://bestyou-three.vercel.app",
+    video: "/videos/AIPMBootcampDemo.mp4"
+
+  },
+  
   {
     title: "Ethos: Small Business Platform",
     date: "Nov – Dec 2024",

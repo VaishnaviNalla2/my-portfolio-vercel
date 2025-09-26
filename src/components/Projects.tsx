@@ -20,6 +20,22 @@ const projects = [
 
   },
   {
+    title: "Whisper AI – Privacy-First Emotional Support Chat Interface",
+    date: "May 2025 – Present",
+    tech: ["React", "JavaScript", "REST APIs", "Firebase", "Vercel",
+    "Webpack", "OpenAI API", "Agile"],
+    description: `Designed and built a responsive, multi-page chat interface in React for anonymous journaling and real-time AI-powered support.
+    Integrated OpenAI's GPT-based LLM via RESTful APIs to detect emotional abuse patterns and provide empathetic guidance.
+    Implemented anonymous session handling, emotion check logic, and a Safe Exit mechanism using Firebase Authentication and Firestore.
+    Developed dynamic, accessible UI components including modal dialogs, alert banners, and emotion feedback prompts based on Figma designs.
+    Collaborated in an Agile environment with UI/UX designers, backend developers, and AI engineers to iterate on features and improve user experience.
+    Deployed the application to Vercel for internal testing and feedback, ensuring rapid iteration and fast feedback loops.
+    Actively contributed to frontend performance improvements, accessibility compliance, and privacy-focused interactions throughout development.`,
+    link: "https://kyrahai.onrender.com/whisper-ai/",
+    video: "/videos/AIPMBootcampDemo.mp4"
+
+  },
+  {
     title: "Ethos: Small Business Platform",
     date: "Nov – Dec 2024",
     tech: ["React", "React Native", "Firebase", "REST APIs"],

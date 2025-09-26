@@ -6,7 +6,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 const projects = [
   {
   title: "Whisper AI – Privacy-First Emotional Support Chat Interface",
-  date: "June 2025 – Present",
+  date: "May 2025 – Present",
   tech: [
     "React", "JavaScript", "REST APIs", "Firebase", "Vercel",
     "Webpack", "OpenAI API", "Agile"

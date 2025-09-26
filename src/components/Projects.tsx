@@ -17,8 +17,8 @@ const projects = [
     Collaborated in an Agile environment with UI/UX designers, backend developers, and AI engineers to iterate on features and improve user experience.
     Deployed the application to Vercel for internal testing and feedback, ensuring rapid iteration and fast feedback loops.
     Actively contributed to frontend performance improvements, accessibility compliance, and privacy-focused interactions throughout development.`,
-    link: "https://kyrahai.onrender.com/whisper-ai/",
-    video: "https://drive.google.com/file/d/1qV5eRZXLbkEmRcONkMSo386Vz6hllyYJ/view?usp=sharing"
+    link: "https://drive.google.com/file/d/1qV5eRZXLbkEmRcONkMSo386Vz6hllyYJ/view?usp=sharing",
+    video: null
 
 
   },
@@ -145,24 +145,25 @@ export default function ProjectsScrollReveal() {
               {project.description}
             </p>
 
-            {idx === 0 && (
-              <div className="flex gap-4 mt-4">
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 bg-[#F47174] text-white text-sm rounded-full font-medium hover:bg-[#e05a5f] transition"
-                >
-                  View Work ↗
-                </a>
-                <button
-                  onClick={() => setOpenVideoModal(idx)}
-                  className="px-4 py-2 bg-[#F47174] text-white text-sm rounded-full font-medium hover:bg-[#e05a5f] transition"
-                >
-                  View Demo Video 🎥
-                </button>
-              </div>
-            )}
+            {idx === 0 && project.video && (
+  <div className="flex gap-4 mt-4">
+    <a
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="px-4 py-2 bg-[#F47174] text-white text-sm rounded-full font-medium hover:bg-[#e05a5f] transition"
+    >
+      View Work ↗
+    </a>
+    <button
+      onClick={() => setOpenVideoModal(idx)}
+      className="px-4 py-2 bg-[#F47174] text-white text-sm rounded-full font-medium hover:bg-[#e05a5f] transition"
+    >
+      View Demo Video 🎥
+    </button>
+  </div>
+)}
+
                 {project.title === "Multifunctional Text & Speech Converter" && (
   <button
     onClick={() => setOpenPDFModal(idx)}

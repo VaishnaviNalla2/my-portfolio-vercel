@@ -18,7 +18,8 @@ const projects = [
     Deployed the application to Vercel for internal testing and feedback, ensuring rapid iteration and fast feedback loops.
     Actively contributed to frontend performance improvements, accessibility compliance, and privacy-focused interactions throughout development.`,
     link: "https://kyrahai.onrender.com/whisper-ai/",
-    video: "/videos/AIPMBootcampDemo.mp4"
+    video: "https://drive.google.com/file/d/1qV5eRZXLbkEmRcONkMSo386Vz6hllyYJ/view?usp=sharing"
+
 
   },
  {

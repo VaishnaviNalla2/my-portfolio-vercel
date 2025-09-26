@@ -5,6 +5,21 @@ import { motion, useScroll, useTransform } from "framer-motion"
 
 const projects = [
   {
+  title: "Whisper AI – Privacy-First Emotional Support Chat Interface",
+  date: "June 2025 – Present",
+  tech: [
+    "React", "JavaScript", "REST APIs", "Firebase", "Vercel",
+    "Webpack", "OpenAI API", "Agile"
+  ],
+  description: `Designed and built a responsive, multi-page chat interface in React for anonymous journaling and real-time AI-powered support.
+    Integrated OpenAI's GPT-based LLM via RESTful APIs to detect emotional abuse patterns and provide empathetic guidance.
+    Implemented anonymous session handling, emotion check logic, and a Safe Exit mechanism using Firebase Authentication and Firestore.
+    Developed dynamic, accessible UI components including modal dialogs, alert banners, and emotion feedback prompts based on Figma designs.
+    Collaborated in an Agile environment with UI/UX designers, backend developers, and AI engineers to iterate on features and improve user experience.
+    Deployed the application to Render for internal testing and feedback, ensuring rapid iteration and fast feedback loops.
+    Actively contributed to frontend performance improvements, accessibility compliance, and privacy-focused interactions throughout development.`,
+  video: "/videos/AIPMBootcampDemo.mp4"
+    
     title: "AI-Driven Profile Optimizer Metrics Dashboard",
     date: "Jan 2025 – April 2025",
     tech: ["React", "JavaScript", "REST APIs", "Vercel", "Agile"],

@@ -5,15 +5,15 @@ import { motion } from 'framer-motion'
 const skills = [
   {
     title: 'Languages',
-    items: ['Python', 'JavaScript (ES6+)', 'TypeScript', 'C#', 'Java', 'HTML5', 'CSS3', 'SQL'],
+    items: ['Python', 'JavaScript (ES6+)', 'TypeScript', 'Java', 'HTML5', 'CSS3', 'SQL'],
   },
   {
     title: 'Databases',
-    items: ['PostgreSQL', 'MySQL', 'MongoDB', 'Redis', '(learning RabbitMQ)'],
+    items: ['PostgreSQL', 'MySQL', 'MongoDB', '(learning RabbitMQ)'],
   },
   {
     title: 'Frontend',
-    items: ['React', 'Next.js', 'React Native', 'Bootstrap', 'ASP.NET', 'ASP', 'Tailwind CSS', 'Responsive UI Design', 'Angular'],
+    items: ['React', 'Next.js', 'React Native', 'Bootstrap', 'ASP', 'Tailwind CSS', 'Responsive UI Design', 'Angular'],
   },
   {
     title: 'Backend & APIs',
@@ -22,6 +22,10 @@ const skills = [
   {
     title: 'Developer Tools',
     items: ['JIRA', 'GitHub', 'VS Code', 'Vercel', 'Postman', 'Agile/Scrum', 'Figma to code'],
+  },
+  {
+    title: 'GenAI Tools',
+    items: ['OpenAI API (ChatGPT)', 'LangChain', 'Prompt Engineering', 'GPT-4', 'HuggingFace', 'LLM integration'],
   },
   {
     title: 'Web & Automation',

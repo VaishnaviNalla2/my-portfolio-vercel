@@ -8,7 +8,7 @@ const experiences = [
   {
     title: "Software Engineer Intern",
     org: "PM Accelerator – Florida, USA",
-    date: "Nov 2024 – Apr 2025",
+    date: "Nov 2024 – Present",
     points: [
       "Developed web pages using React and JavaScript based on Figma designs provided by the UI/UX team.",
       "Integrated RESTful APIs and connected frontend to backend databases for seamless data flow.",
@@ -18,7 +18,7 @@ const experiences = [
     ]
   },
   {
-    title: "Cybersecurity Intern",
+    title: "Software- Cybersecurity Intern",
     org: "AICTE, Palo Alto Academy – India",
     date: "July 2022 – Sep 2022",
     points: [
